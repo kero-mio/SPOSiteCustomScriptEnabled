@@ -72,9 +72,15 @@ try {
     Set-SPOSite `
         -Identity $SiteUrl `
         -DenyAddAndCustomizePages $false
-
+    
     $site = Get-SPOSite -Identity $SiteUrl
     Write-Output "DenyAddAndCustomizePages: $($site.DenyAddAndCustomizePages)"
+    
+    if ($site.DenyAddAndCustomizePages -ne "Disabled") {
+        throw "Custom script enablement failed. Expected DenyAddAndCustomizePages = Disabled, but actual value is '$($site.DenyAddAndCustomizePages)'."
+    }
+    
+    Write-Output "Custom script enablement verified successfully."
 }
 finally {
     if (Test-Path $pfxPath) {
