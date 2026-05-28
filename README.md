@@ -158,4 +158,6 @@ Automationアカウント - [共有リソース] - [モジュール]に下記を
 - [編集]メニューから、[VS Codeで編集] または、[ポータルで編集]　を選択し、当レポジトリにある、[SPOCustomScriptXX.ps1]のコードを張り付けてください
 - [テスト ウィンドウ] を起動し、 [開始]ボタンで動作検証を実施してください
 - 問題なければ、Runbookを公開します。なお、Azure PortalからRunbookを公開すると、GUI反応が悪いため、即時公開する場合は、Azure Cloud Shell を使い、Publish_Runbook.ps1を手動で実行することで、Runbookを即時公開できます。
-  
+
+### 上記でわかりづらい方へ
+ Plus Cloud Tech Blog [https://blog.platic.jp/20260528/] にて、補足を解説していますので、ご確認ください
